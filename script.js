@@ -61,7 +61,7 @@ const disableBoxes = () => {
 
 const enableBoxes = () => {
   for (let box of boxes) {
-    box.enabled = false;
+    box.disabled  = false;
     box.innerText = "";
   }
 };
