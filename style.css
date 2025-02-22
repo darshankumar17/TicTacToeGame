@@ -38,7 +38,7 @@ h1 {
   border: none;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   font-size: 8vmin;
-  color: #d161ff;
+  /* color: #d161ff; */
   background-color: #ffff;
 }
 
@@ -77,4 +77,12 @@ h1 {
 
 .hide {
   display: none;
+}
+
+.x-color{
+  color: #e560ff;
+}
+
+.o-color{
+  color: #a359ff;
 }

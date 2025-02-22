@@ -27,13 +27,14 @@ const resetGame = () => {
 
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
-    // console.log("box was clicked");
     if (turnO) {
       //player O
+      box.classList.add("o-color")
       box.innerText = "O";
       turnO = false;
     } else {
       //player X
+      box.classList.add("x-color")
       box.innerText = "X";
       turnO = true;
     }
@@ -55,13 +56,14 @@ const gameDraw = () => {
 
 const disableBoxes = () => {
   for (let box of boxes) {
-    box.disabled = false;
+    box.disabled = true;
   }
 };
 
 const enableBoxes = () => {
   for (let box of boxes) {
     box.disabled  = false;
+    box.classList.remove("x-color", "o-color");  
     box.innerText = "";
   }
 };
@@ -78,13 +80,12 @@ const checkWinner = () => {
     let pos2Val = boxes[pattern[1]].innerText;
     let pos3Val = boxes[pattern[2]].innerText;
 
-    if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
-      if (pos1Val === pos2Val && pos2Val === pos3Val) {
-        // console.log("Winner", pos1Val);
-        showWinner(pos1Val);
-      }
+ if (pos1Val !== "" && pos1Val === pos2Val && pos2Val === pos3Val) {    
+      showWinner(pos1Val);
+      return true; // Return true if there's a winner
     }
   }
+  return false; // Return false if no winner
 };
 
 newGameBtn.addEventListener("click", resetGame);
