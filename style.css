@@ -40,6 +40,7 @@ h1 {
   font-size: 8vmin;
   /* color: #d161ff; */
   background-color: #ffff;
+  cursor: pointer;
 }
 
 #reset_btn {
@@ -49,6 +50,7 @@ h1 {
   color: #ffffff;
   border-radius: 1rem;
   border: none;
+  cursor: pointer;
 }
 
 #new-btn {
@@ -59,6 +61,7 @@ h1 {
   color: #ffffff;
   border-radius: 1rem;
   border: none;
+  cursor: pointer;
 }
 
 #msg {
